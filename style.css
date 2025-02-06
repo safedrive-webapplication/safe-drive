@@ -5,7 +5,7 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 15px 0;
     width: 100%;
     max-width: 1200px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -30,7 +30,7 @@ body {
 
 .logo-container {
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +38,7 @@ body {
 }
 
 .logo-container img {
-    height: 80px;
+    height: 70px;
     width: auto;
 }
 
@@ -46,7 +46,7 @@ body {
 .info-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
     padding: 20px;
     width: 100%;
@@ -55,7 +55,7 @@ body {
 
 .speed-road-container, .alert-container {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
@@ -66,22 +66,23 @@ body {
 .info-card {
     background-color: #007bff;
     color: white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     text-align: center;
-    min-width: 150px;
-    flex: 1 1 200px;
+    min-width: 130px;
+    flex: 1 1 180px;
+    font-size: 16px;
 }
 
 .alert-card {
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
 }
 
 /* Road Safety Instructions */
 .safety-instructions {
     background-color: #ffc107;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     text-align: center;
     width: 100%;
@@ -94,13 +95,13 @@ body {
 .safety-images {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
 .safety-item img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
 }
 
 .safety-item p {
@@ -116,28 +117,64 @@ body {
     text-align: center;
     padding: 10px;
     width: 100%;
+    font-size: 14px;
     margin-top: auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navContainer {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .logo-container img {
+        height: 55px;
+    }
+    .info-container {
+        padding: 10px;
+    }
     .speed-road-container, .alert-container {
         flex-direction: column;
         align-items: center;
     }
-    .navContainer {
-        flex-direction: column;
+    .info-card {
+        width: 100%;
+        max-width: 300px;
+        font-size: 14px;
+        padding: 12px;
     }
-    .logo-container img {
-        height: 60px;
+    .alert-card {
+        max-width: 280px;
     }
     .safety-item img {
-        width: 70px;
+        width: 60px;
+        height: 60px;
     }
     .safety-item p {
         font-size: 12px;
     }
     .footer {
         font-size: 12px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+    .logo-container img {
+        height: 50px;
+    }
+    .info-card {
+        font-size: 13px;
+        padding: 10px;
+    }
+    .safety-item img {
+        width: 50px;
+        height: 50px;
+    }
+    .safety-item p {
+        font-size: 10px;
     }
 }
