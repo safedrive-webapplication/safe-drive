@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe-Drive: Smart Alerts</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navContainer">
+            <div class="logo-container">
+                <img src="logos.png" alt="Safe-Drive Logo">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Speed, Road, and Alerts Container -->
+    <section class="info-container">
+        <div class="speed-road-container">
+            <div class="info-card">
+                <h3>Speed</h3>
+                <p id="speed">0 km/h</p>
+            </div>
+            <div class="info-card">
+                <h3>Road</h3>
+                <p id="road">Unknown</p>
+            </div>
+        </div>
+        <div class="alert-container">
+            <div class="info-card alert-card">
+                <h3>Alert</h3>
+                <p id="alert">None</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Road Safety Instructions -->
+    <section class="safety-instructions">
+        <h2>Road Safety Instructions</h2>
+        <div class="safety-images">
+            <div class="safety-item">
+                <img src="seatbelt.png" alt="Wear Seatbelt">
+                <p>Wear Your Seatbelt</p>
+            </div>
+            <div class="safety-item">
+                <img src="dont-drink.png" alt="Don't Drink and Drive">
+                <p>Don't Drink and Drive</p>
+            </div>
+            <div class="safety-item">
+                <img src="signal.png" alt="Obey Traffic Signals">
+                <p>Obey Traffic Signals</p>
+            </div>
+            <div class="safety-item">
+                <img src="school.png" alt="School Zone">
+                <p>Drive Safely Near Schools</p>
+            </div>
+            <div class="safety-item">
+                <img src="speed.png" alt="Obey Speed Limit">
+                <p>Obey Speed Limits</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 safedrive.webapplication. All rights reserved.</p>
+    </footer>
+
+    <div id="audio-container"></div>
+</body>
+</html>
