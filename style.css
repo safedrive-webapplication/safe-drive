@@ -1,11 +1,10 @@
-/* General Styles */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    font-size:18px;
+    font-size: 18px;
 }
 
 body {
@@ -13,7 +12,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
 }
 
 /* Navigation Bar */
@@ -23,12 +21,10 @@ body {
     align-items: center;
     padding: 15px 0;
     width: 100%;
-    max-width: 120px;
-   
 }
-.im{
-    width:250px;
-    height:auto;
+.im {
+    width: 180px;
+    height: auto;
 }
 
 /* Info Container */
@@ -39,7 +35,7 @@ body {
     align-items: center;
     padding: 20px;
     width: 100%;
-    max-width: 90%;
+    max-width: 600px;
 }
 
 .speed-road-container, .alert-container {
@@ -48,20 +44,17 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 600px;
-    height: 100px;
 }
 
-/* Info Card Styling */
 .info-card {
     background-color: #007bff;
     color: white;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    min-width: 130px;
     flex: 1 1 180px;
     font-size: 16px;
+    min-width: 120px;
 }
 
 .alert-card {
@@ -69,29 +62,26 @@ body {
     max-width: 350px;
 }
 
-/* Road Safety Instructions */
+/* Safety Instructions */
 .safety-instructions {
     background-color: #ffc107;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
     width: 100%;
-    max-width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 600px;
 }
 
 .safety-images {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
 .safety-item img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 }
 
 .safety-item p {
@@ -101,6 +91,7 @@ body {
     margin-top: 5px;
 }
 
+/* Footer */
 .footer {
     background-color: #007bff;
     color: white;
@@ -113,13 +104,6 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navContainer {
-        flex-direction: column;
-        padding: 10px;
-    }
-    .logo-container img {
-        height: 55px;
-    }
     .info-container {
         padding: 10px;
     }
@@ -129,40 +113,35 @@ body {
     }
     .info-card {
         width: 100%;
-        max-width: 300px;
+        max-width: 250px;
         font-size: 14px;
-        padding: 12px;
     }
     .alert-card {
         max-width: 280px;
     }
     .safety-item img {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
     .safety-item p {
         font-size: 12px;
     }
     .footer {
         font-size: 12px;
-        padding: 8px;
     }
 }
 
 @media (max-width: 480px) {
-    body {
-        font-size: 16px;
-    }
-    .logo-container img {
-        height: 50px;
+    .im {
+        width: 150px;
     }
     .info-card {
         font-size: 13px;
         padding: 10px;
     }
     .safety-item img {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
     .safety-item p {
         font-size: 10px;
