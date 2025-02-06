@@ -1,4 +1,4 @@
-/*  General Styles */
+/* General Styles */
 html, body {
     height: 100%;
     margin: 0;
@@ -49,6 +49,7 @@ body {
     flex-wrap: wrap;
     width: 100%;
     max-width: 600px;
+    height: 100px;
 }
 
 /* Info Card Styling */
