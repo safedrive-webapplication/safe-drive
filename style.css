@@ -6,142 +6,82 @@ html, body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    font-family: 'Arial', sans-serif; /* Fixed font for all devices */
-    font-size: 20px; /* Ensures uniform text size */
+    font-family: 'Arial', sans-serif;
 }
 
-/* Ensure body content takes full height */
-body {
-    background-color: #f4f4f9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
-}
-
-/* Navigation Bar */
+/* Responsive Navigation Bar */
 .navContainer {
     background-color: #007bff;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
-    width: 3000px;
-    height: 150px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Updated Logo Container */
-.logo-container {
-    width: 1700px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #007bff;
-    padding: 20px 0;
+    padding: 15px;
+    width: 100%;
 }
 
 .logo-container img {
-    height: 150px;
+    max-height: 60px;
     width: auto;
 }
 
-/* Info Container */
+/* Responsive Info Cards */
 .info-container {
     display: flex;
-    flex-direction: column; /* Stack rows */
-    gap: 20px;
+    flex-direction: column;
     align-items: center;
     padding: 20px;
-    max-width: 90%;
+    width: 90%;
+    max-width: 1200px;
 }
 
-/* Speed & Road Row */
-.speed-road-container {
-    width: 1000px;
+.speed-road-container, .alert-container {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    width: 100%;
 }
 
-/* Alert Row */
-.alert-container {
-    width: 2000px;
-    display: flex;
-    justify-content: center;
-}
-
-/* Info Card Styling */
 .info-card {
     background-color: #007bff;
     color: white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     text-align: center;
-    min-width: 200px;
-    flex: 1 1 250px;
+    flex: 1 1 200px;
+    max-width: 300px;
 }
 
-/* Alert Card Specific */
-.alert-card {
-    background-color: #007bff;
-    color: white;
-    width: 100%; /* Make alert card full width */
-    max-width: 1000px;
-}
-
-/* Road Safety Instructions */
+/* Responsive Safety Section */
 .safety-instructions {
     background-color: #ffc107;
     padding: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
     border-radius: 10px;
-    text-align: center;
-    width: 80%;
     margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-/* Title Styling */
-.safety-instructions h2 {
-    color: #000;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Image Container */
 .safety-images {
     display: flex;
-    justify-content: center;
-    gap: 100px; /* Spacing between images */
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Individual Safety Item */
 .safety-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
+    max-width: 150px;
 }
 
-/* Image Styling - No Shadows */
 .safety-item img {
-    width: 120px;
-    height: 120px;
+    width: 100%;
+    max-width: 120px;
+    height: auto;
 }
 
-/* Caption Styling */
-.safety-item p {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 5px;
-}
-
-/* Footer - Fixed at the bottom */
+/* Responsive Footer */
 .footer {
     background-color: #007bff;
     color: white;
@@ -151,62 +91,15 @@ body {
     margin-top: auto;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .safety-images {
-        gap: 80px; /* Reduce space on medium screens */
-    }
-}
-
+/* Mobile and Tablet Optimization */
 @media (max-width: 768px) {
-    .info-card {
-        flex: 1 1 100%;
-        max-width: 90%;
-    }
-
-    .speed-road-container {
-        flex-direction: column; /* Stack on small screens */
+    .speed-road-container, .alert-container {
+        flex-direction: column;
         align-items: center;
     }
 
-    .alert-card {
-        max-width: 100%;
-    }
-
-    .navContainer {
-        flex-direction: column;
-    }
-
-    .logo-container img {
-        height: 100px;
-    }
-
-    /* Responsive Image Layout */
     .safety-images {
         flex-direction: column;
         align-items: center;
-        gap: 50px; /* Reduce space on small screens */
-    }
-
-    .safety-item img {
-        width: 100px;
-    }
-
-    .safety-item p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .info-card p {
-        font-size: 20px;
-    }
-
-    .safety-instructions {
-        padding: 15px;
-    }
-
-    .footer {
-        font-size: 14px;
     }
 }
