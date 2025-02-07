@@ -129,7 +129,7 @@ function checkSensitiveZone(lat, lng) {
                     playAudioAlert("no_horn.mp3");
                     document.getElementById("alert").textContent = "No Horn!";
                 } else if (zone.type === "school") {
-                    playAudioAlert("go_slow.mp3");
+                    playAudioAlert("./go_slow.mp3");
                     document.getElementById("alert").textContent = "Slow Down! School Zone";
                 }
             }
@@ -159,7 +159,7 @@ function checkSpeedLimit(currentSpeed, roadInfo) {
         if (speedLimitExceededTime === null) {
             speedLimitExceededTime = Date.now(); // Start timing
         } else if (Date.now() - speedLimitExceededTime >= 5000) { // Alert only if ignored for 5 seconds
-            playAudioAlert("go_slow.mp3");
+            playAudioAlert("./alert.mp3");
             document.getElementById("alert").textContent = "Slow Down! You are exceeding the speed limit.";
             speedLimitExceededTime = Date.now(); // Restart timing for next alert
         }
