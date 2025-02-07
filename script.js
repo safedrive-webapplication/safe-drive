@@ -32,7 +32,8 @@ const sensitiveZones = [
     { name: "Gopal Naidu Children's School", lat: 11.0345, lng: 77.0123, type: "school" },
     { name: "Gopal Naidu Higher Secondary School", lat: 11.0387, lng: 77.0185, type: "school" },
     { name: "ABC Matriculation School", lat: 11.0420, lng: 77.0220, type: "school" },
-    { name: "Sri Ramakrishna Dental Hospital", lat: 11.0265, lng: 77.0008, type: "hospital" }
+    { name: "Sri Ramakrishna College of Arts and Science", lat: 11.02217, lng: 76.98703, type: "college" }
+
 ];
 
 // List of all main roads in Coimbatore, including roads near Sri Krishna College of Arts and Science, with speed limits
@@ -53,20 +54,20 @@ const roads = [
     { road: "Thadagam Road", startLat: 11.0200, startLng: 76.9300, endLat: 11.0300, endLng: 76.9400, speedLimit: 40 },
     { road: "Sathyamangalam Road", startLat: 11.0800, startLng: 76.9430, endLat: 11.0900, endLng: 76.9550, speedLimit: 60 },
     { road: "Vilankurichi Road", startLat: 11.0650, startLng: 76.9950, endLat: 11.0750, endLng: 77.0050, speedLimit: 40 },
-    { road: "Peelamedu Road", startLat: 11.0150, startLng: 76.9780, endLat: 11.0220, endLng: 76.9880, speedLimit: 3 },
+    { road: "Peelamedu Road", startLat: 11.0150, startLng: 76.9780, endLat: 11.0220, endLng: 76.9880, speedLimit: 1 },
     { road: "Singanallur Road", startLat: 10.9930, startLng: 76.9880, endLat: 11.0000, endLng: 76.9980, speedLimit: 50 },
     { road: "Race Course Road", startLat: 10.9880, startLng: 76.9600, endLat: 10.9950, endLng: 76.9700, speedLimit: 50 },
     { road: "Gandhipuram Main Road", startLat: 11.0120, startLng: 76.9630, endLat: 11.0200, endLng: 76.9730, speedLimit: 40 },
     { road: "Sulur Road", startLat: 11.0150, startLng: 77.0050, endLat: 11.0250, endLng: 77.0150, speedLimit: 60 },
     { road: "Perur Road", startLat: 10.9880, startLng: 76.9430, endLat: 10.9980, endLng: 76.9530, speedLimit: 50 },
     { road: "Hope College Road", startLat: 11.0180, startLng: 76.9930, endLat: 11.0280, endLng: 77.0030, speedLimit: 40 },
-    { road: "Coimbatore Bypass Road", startLat: 10.9900, startLng: 77.0450, endLat: 11.0100, endLng: 77.0550, speedLimit: 80 },
+    { road: "Coimbatore Bypass Road", startLat: 10.9900, startLng: 77.0450, endLat: 11.0100, endLng: 77.0550, speedLimit: 1 },
     { road: "L&T Bypass Road", startLat: 10.9500, startLng: 76.9850, endLat: 10.9700, endLng: 76.9950, speedLimit: 80 },
     { road: "Ettimadai Road", startLat: 10.8950, startLng: 76.8950, endLat: 10.9100, endLng: 76.9050, speedLimit: 60 },
     { road: "Gandhimanagar Road", startLat: 11.0251, startLng: 77.0012, endLat: 11.0285, endLng: 77.0054, speedLimit: 35 },
     { road: "VK Road", startLat: 11.0287, startLng: 77.0055, endLat: 11.0354, endLng: 77.0152, speedLimit: 35 },
     { road: "Avarampalayam Road", startLat: 11.0358, startLng: 77.0160, endLat: 11.0451, endLng: 77.0253, speedLimit: 35 },
-    { road: "Nava India Road", startLat: 11.0215, startLng: 76.9982, endLat: 11.0282, endLng: 77.0068, speedLimit: 3}
+    { road: "Nava India Road", startLat: 11.0215, startLng: 76.9982, endLat: 11.0282, endLng: 77.0068, speedLimit: 1}
 ];
 
 
@@ -135,7 +136,7 @@ function checkSensitiveZone(lat, lng) {
     let count = 0;
     function playRepeatedly() {
         if (count < 3) {
-            playAudioAlert("no_horn.mp3");
+            playAudioAlert("hospital-zone-alert.mp3");
             count++;
             setTimeout(playRepeatedly, 2000);
         }
@@ -144,7 +145,7 @@ function checkSensitiveZone(lat, lng) {
     
                     document.getElementById("alert").textContent = "No Horn!";
                 } else if (zone.type === "school") {
-                    playAudioAlert("./go_slow.mp3");
+                    playAudioAlert("school-zone-alert.mp3");
                     document.getElementById("alert").textContent = "Slow Down! School Zone";
                 }
             }
@@ -173,8 +174,8 @@ function checkSpeedLimit(currentSpeed, roadInfo) {
     if (currentSpeed > roadInfo.speedLimit) {
         if (speedLimitExceededTime === null) {
             speedLimitExceededTime = Date.now(); // Start timing
-        } else if (Date.now() - speedLimitExceededTime >= 5000) { // Alert only if ignored for 5 seconds
-            playAudioAlert("./alert.mp3");
+        } else if (Date.now() - speedLimitExceededTime >= 3000) { // Alert only if ignored for 3 seconds
+            playAudioAlert("speed-alert.mp3");
             document.getElementById("alert").textContent = "Slow Down! You are exceeding the speed limit.";
             speedLimitExceededTime = Date.now(); // Restart timing for next alert
         }
