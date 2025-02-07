@@ -2,6 +2,10 @@
 const sensitiveZones = [
     { name: "PSG Hospitals", lat: 11.0183, lng: 76.9740, type: "hospital" },
     { name: "Sri Ramakrishna Matriculation Higher Secondary School", lat: 11.0176, lng: 76.9912, type: "school" },
+    { name: "Gopal Naidu Children's School", lat: 11.0345, lng: 77.0123, type: "school" },
+    { name: "Gopal Naidu Higher Secondary School", lat: 11.0387, lng: 77.0185, type: "school" },
+    { name: "ABC Matriculation School", lat: 11.0420, lng: 77.0220, type: "school" },
+    { name: "Sri Ramakrishna Dental Hospital", lat: 11.0265, lng: 77.0008, type: "hospital" },
     { name: "Coimbatore Medical College Hospital", lat: 11.0183, lng: 76.9662, type: "hospital" },
     { name: "Ganga Hospital", lat: 11.0104, lng: 76.9616, type: "hospital" },
     { name: "KG Hospital", lat: 11.0027, lng: 76.9663, type: "hospital" },
@@ -45,6 +49,17 @@ const roads = [
     { road: "Kamarajar Road", startLat: 11.0120, startLng: 76.9900, endLat: 11.0180, endLng: 77.0000, speedLimit: 40 },
     { road: "Mettupalayam Road", startLat: 11.0500, startLng: 76.9450, endLat: 11.0600, endLng: 76.9550, speedLimit: 50 },
     { road: "Avinashi Road", startLat: 11.0250, startLng: 76.9980, endLat: 11.0350, endLng: 77.0080, speedLimit: 60 },
+
+    { road: "Gandhimanagar Road", startLat: 11.0251, startLng: 77.0012, endLat: 11.0285, endLng: 77.0054, speedLimit: 35 },
+    
+    // VK Road
+    { road: "VK Road", startLat: 11.0287, startLng: 77.0055, endLat: 11.0354, endLng: 77.0152, speedLimit: 35 },
+
+    // Avarampalayam Road
+    { road: "Avarampalayam Road", startLat: 11.0358, startLng: 77.0160, endLat: 11.0451, endLng: 77.0253, speedLimit: 35 },
+
+    // Nava India Road
+    { road: "Nava India Road", startLat: 11.0215, startLng: 76.9982, endLat: 11.0282, endLng: 77.0068, speedLimit: 35 },
 
     // Other major roads in Coimbatore
     { road: "Thadagam Road", startLat: 11.0200, startLng: 76.9300, endLat: 11.0300, endLng: 76.9400, speedLimit: 40 },
