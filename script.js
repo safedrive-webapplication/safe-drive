@@ -53,7 +53,7 @@ const roads = [
     { road: "Thadagam Road", startLat: 11.0200, startLng: 76.9300, endLat: 11.0300, endLng: 76.9400, speedLimit: 40 },
     { road: "Sathyamangalam Road", startLat: 11.0800, startLng: 76.9430, endLat: 11.0900, endLng: 76.9550, speedLimit: 60 },
     { road: "Vilankurichi Road", startLat: 11.0650, startLng: 76.9950, endLat: 11.0750, endLng: 77.0050, speedLimit: 40 },
-    { road: "Peelamedu Road", startLat: 11.0150, startLng: 76.9780, endLat: 11.0220, endLng: 76.9880, speedLimit: 40 },
+    { road: "Peelamedu Road", startLat: 11.0150, startLng: 76.9780, endLat: 11.0220, endLng: 76.9880, speedLimit: 3 },
     { road: "Singanallur Road", startLat: 10.9930, startLng: 76.9880, endLat: 11.0000, endLng: 76.9980, speedLimit: 50 },
     { road: "Race Course Road", startLat: 10.9880, startLng: 76.9600, endLat: 10.9950, endLng: 76.9700, speedLimit: 50 },
     { road: "Gandhipuram Main Road", startLat: 11.0120, startLng: 76.9630, endLat: 11.0200, endLng: 76.9730, speedLimit: 40 },
