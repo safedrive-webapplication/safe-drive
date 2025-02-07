@@ -28,7 +28,11 @@ const sensitiveZones = [
     { name: "Shri Nehru Vidyalaya", lat: 11.0016, lng: 76.9713, type: "school" },
     { name: "Anan Kids Academy", lat: 11.0531, lng: 76.9772, type: "school" },
     { name: "Vidhya Niketan Public School", lat: 11.0385, lng: 77.0001, type: "school" },
-    { name: "Vivekam Senior Secondary School", lat: 11.0400, lng: 76.9822, type: "school" }
+    { name: "Vivekam Senior Secondary School", lat: 11.0400, lng: 76.9822, type: "school" },
+    { name: "Gopal Naidu Children's School", lat: 11.0345, lng: 77.0123, type: "school" },
+    { name: "Gopal Naidu Higher Secondary School", lat: 11.0387, lng: 77.0185, type: "school" },
+    { name: "ABC Matriculation School", lat: 11.0420, lng: 77.0220, type: "school" },
+    { name: "Sri Ramakrishna Dental Hospital", lat: 11.0265, lng: 77.0008, type: "hospital" }
 ];
 
 // List of all main roads in Coimbatore, including roads near Sri Krishna College of Arts and Science, with speed limits
@@ -58,7 +62,11 @@ const roads = [
     { road: "Hope College Road", startLat: 11.0180, startLng: 76.9930, endLat: 11.0280, endLng: 77.0030, speedLimit: 40 },
     { road: "Coimbatore Bypass Road", startLat: 10.9900, startLng: 77.0450, endLat: 11.0100, endLng: 77.0550, speedLimit: 80 },
     { road: "L&T Bypass Road", startLat: 10.9500, startLng: 76.9850, endLat: 10.9700, endLng: 76.9950, speedLimit: 80 },
-    { road: "Ettimadai Road", startLat: 10.8950, startLng: 76.8950, endLat: 10.9100, endLng: 76.9050, speedLimit: 60 }
+    { road: "Ettimadai Road", startLat: 10.8950, startLng: 76.8950, endLat: 10.9100, endLng: 76.9050, speedLimit: 60 },
+    { road: "Gandhimanagar Road", startLat: 11.0251, startLng: 77.0012, endLat: 11.0285, endLng: 77.0054, speedLimit: 35 },
+    { road: "VK Road", startLat: 11.0287, startLng: 77.0055, endLat: 11.0354, endLng: 77.0152, speedLimit: 35 },
+    { road: "Avarampalayam Road", startLat: 11.0358, startLng: 77.0160, endLat: 11.0451, endLng: 77.0253, speedLimit: 35 },
+    { road: "Nava India Road", startLat: 11.0215, startLng: 76.9982, endLat: 11.0282, endLng: 77.0068, speedLimit: 35 }
 ];
 
 
