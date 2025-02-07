@@ -159,7 +159,7 @@ function checkSpeedLimit(currentSpeed, roadInfo) {
         if (speedLimitExceededTime === null) {
             speedLimitExceededTime = Date.now(); // Start timing
         } else if (Date.now() - speedLimitExceededTime >= 5000) { // Alert only if ignored for 5 seconds
-            playAudioAlert("go_slow.mp3");
+            playAudioAlert("roadspeeds.mp3");
             document.getElementById("alert").textContent = "Slow Down! You are exceeding the speed limit.";
             speedLimitExceededTime = Date.now(); // Restart timing for next alert
         }
