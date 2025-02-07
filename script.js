@@ -34,42 +34,33 @@ const sensitiveZones = [
 // List of all main roads in Coimbatore, including roads near Sri Krishna College of Arts and Science, with speed limits
 const roads = [
     // Roads near Sri Krishna College of Arts and Science
-    { road: "Kuniamuthur Road", lat: 10.9543, lng: 76.9746, speedLimit: 50 },
-    { road: "Sundakkamuthur Road", lat: 10.9602, lng: 76.9703, speedLimit: 40 },
-    { road: "Palakkad Main Road", lat: 10.9521, lng: 76.9798, speedLimit: 60 },
-    { road: "Pollachi Main Road", lat: 10.9435, lng: 76.9772, speedLimit: 50 },
-    { road: "Madukkarai Road", lat: 10.9314, lng: 76.9728, speedLimit: 50 },
-    { road: "Ukkadam Bypass Road", lat: 10.9846, lng: 76.9763, speedLimit: 60 },
-    { road: "Trichy Road", lat: 10.9916, lng: 76.9981, speedLimit: 50 },
-    { road: "Kamarajar Road", lat: 11.0156, lng: 76.9954, speedLimit: 40 },
-    { road: "Mettupalayam Road", lat: 11.0563, lng: 76.9511, speedLimit: 50 },
-    { road: "Avinashi Road", lat: 11.0285, lng: 77.0035, speedLimit: 60 },
+    { road: "Kuniamuthur Road", startLat: 10.9520, startLng: 76.9700, endLat: 10.9565, endLng: 76.9790, speedLimit: 50 },
+    { road: "Sundakkamuthur Road", startLat: 10.9580, startLng: 76.9650, endLat: 10.9625, endLng: 76.9755, speedLimit: 40 },
+    { road: "Palakkad Main Road", startLat: 10.9490, startLng: 76.9750, endLat: 10.9550, endLng: 76.9850, speedLimit: 60 },
+    { road: "Pollachi Main Road", startLat: 10.9400, startLng: 76.9700, endLat: 10.9480, endLng: 76.9800, speedLimit: 50 },
+    { road: "Madukkarai Road", startLat: 10.9280, startLng: 76.9680, endLat: 10.9350, endLng: 76.9780, speedLimit: 50 },
+    { road: "Ukkadam Bypass Road", startLat: 10.9810, startLng: 76.9700, endLat: 10.9880, endLng: 76.9820, speedLimit: 60 },
+    { road: "Trichy Road", startLat: 10.9880, startLng: 76.9950, endLat: 10.9950, endLng: 77.0050, speedLimit: 50 },
+    { road: "Kamarajar Road", startLat: 11.0120, startLng: 76.9900, endLat: 11.0180, endLng: 77.0000, speedLimit: 40 },
+    { road: "Mettupalayam Road", startLat: 11.0500, startLng: 76.9450, endLat: 11.0600, endLng: 76.9550, speedLimit: 50 },
+    { road: "Avinashi Road", startLat: 11.0250, startLng: 76.9980, endLat: 11.0350, endLng: 77.0080, speedLimit: 60 },
 
     // Other major roads in Coimbatore
-    { road: "Thadagam Road", lat: 11.0249, lng: 76.9346, speedLimit: 40 },
-    { road: "Sathyamangalam Road", lat: 11.0845, lng: 76.9488, speedLimit: 60 },
-    { road: "Vilankurichi Road", lat: 11.0700, lng: 77.0000, speedLimit: 40 },
-    { road: "Peelamedu Road", lat: 11.0180, lng: 76.9823, speedLimit: 40 },
-    { road: "Singanallur Road", lat: 10.9972, lng: 76.9938, speedLimit: 50 },
-    { road: "Race Course Road", lat: 10.9920, lng: 76.9640, speedLimit: 50 },
-    { road: "Gandhipuram Main Road", lat: 11.0162, lng: 76.9682, speedLimit: 40 },
-    { road: "Sulur Road", lat: 11.0203, lng: 77.0110, speedLimit: 60 },
-    { road: "Perur Road", lat: 10.9928, lng: 76.9483, speedLimit: 50 },
-    { road: "Hope College Road", lat: 11.0234, lng: 76.9989, speedLimit: 40 },
-    { road: "Koundampalayam Road", lat: 11.0642, lng: 76.9940, speedLimit: 50 },
-    { road: "Ganapathy Road", lat: 11.0400, lng: 76.9800, speedLimit: 50 },
-    { road: "Puliakulam Road", lat: 10.9980, lng: 76.9730, speedLimit: 40 },
-    { road: "RS Puram Road", lat: 11.0080, lng: 76.9560, speedLimit: 50 },
-    { road: "Saibaba Colony Road", lat: 11.0280, lng: 76.9500, speedLimit: 50 },
-    { road: "Podanur Road", lat: 10.9650, lng: 76.9780, speedLimit: 50 },
-    { road: "Sundarapuram Road", lat: 10.9900, lng: 76.9300, speedLimit: 40 },
-    { road: "Sulur Bypass Road", lat: 11.0350, lng: 77.0150, speedLimit: 60 },
-    { road: "Keeranatham Road", lat: 11.0950, lng: 76.9930, speedLimit: 50 },
-    { road: "Neelambur Road", lat: 11.0750, lng: 77.0200, speedLimit: 60 },
-    { road: "Coimbatore Bypass Road", lat: 11.0000, lng: 77.0500, speedLimit: 80 },
-    { road: "L&T Bypass Road", lat: 10.9600, lng: 76.9900, speedLimit: 80 },
-    { road: "Ettimadai Road", lat: 10.9020, lng: 76.9000, speedLimit: 60 }
+    { road: "Thadagam Road", startLat: 11.0200, startLng: 76.9300, endLat: 11.0300, endLng: 76.9400, speedLimit: 40 },
+    { road: "Sathyamangalam Road", startLat: 11.0800, startLng: 76.9430, endLat: 11.0900, endLng: 76.9550, speedLimit: 60 },
+    { road: "Vilankurichi Road", startLat: 11.0650, startLng: 76.9950, endLat: 11.0750, endLng: 77.0050, speedLimit: 40 },
+    { road: "Peelamedu Road", startLat: 11.0150, startLng: 76.9780, endLat: 11.0220, endLng: 76.9880, speedLimit: 40 },
+    { road: "Singanallur Road", startLat: 10.9930, startLng: 76.9880, endLat: 11.0000, endLng: 76.9980, speedLimit: 50 },
+    { road: "Race Course Road", startLat: 10.9880, startLng: 76.9600, endLat: 10.9950, endLng: 76.9700, speedLimit: 50 },
+    { road: "Gandhipuram Main Road", startLat: 11.0120, startLng: 76.9630, endLat: 11.0200, endLng: 76.9730, speedLimit: 40 },
+    { road: "Sulur Road", startLat: 11.0150, startLng: 77.0050, endLat: 11.0250, endLng: 77.0150, speedLimit: 60 },
+    { road: "Perur Road", startLat: 10.9880, startLng: 76.9430, endLat: 10.9980, endLng: 76.9530, speedLimit: 50 },
+    { road: "Hope College Road", startLat: 11.0180, startLng: 76.9930, endLat: 11.0280, endLng: 77.0030, speedLimit: 40 },
+    { road: "Coimbatore Bypass Road", startLat: 10.9900, startLng: 77.0450, endLat: 11.0100, endLng: 77.0550, speedLimit: 80 },
+    { road: "L&T Bypass Road", startLat: 10.9500, startLng: 76.9850, endLat: 10.9700, endLng: 76.9950, speedLimit: 80 },
+    { road: "Ettimadai Road", startLat: 10.8950, startLng: 76.8950, endLat: 10.9100, endLng: 76.9050, speedLimit: 60 }
 ];
+
 
 // Function to calculate distance between two coordinates
 // Function to calculate distance between two coordinates
@@ -162,11 +153,44 @@ function checkSpeedLimit(currentSpeed, roadInfo) {
         } else if (Date.now() - speedLimitExceededTime >= 5000) { // Alert only if ignored for 5 seconds
             playAudioAlert("go_slow.mp3");
             document.getElementById("alert").textContent = "Slow Down! You are exceeding the speed limit.";
-            speedLimitExceededTime = null; // Reset timer
+            speedLimitExceededTime = Date.now(); // Restart timing for next alert
         }
     } else {
         speedLimitExceededTime = null; // Reset if below speed limit
         document.getElementById("alert").textContent = `You are within the speed limit of ${roadInfo.speedLimit} km/h`;
+    }
+}
+
+// Function to check if the driver is on a road based on entry & exit points
+function isDriverOnRoad(lat, lng, road) {
+    let distanceStart = getDistance(lat, lng, road.startLat, road.startLng);
+    let distanceEnd = getDistance(lat, lng, road.endLat, road.endLng);
+
+    // Consider driver on road if within 150m of either start or end
+    return (distanceStart < 150 || distanceEnd < 150);
+}
+
+let currentRoad = null;
+
+function checkRoadEntryExit(lat, lng) {
+    let detectedRoad = null;
+
+    for (let road of roads) {
+        if (isDriverOnRoad(lat, lng, road)) {
+            detectedRoad = road;
+            break;
+        }
+    }
+
+    if (detectedRoad && currentRoad === null) {
+        // Driver just entered a road
+        currentRoad = detectedRoad;
+        document.getElementById("road").textContent = `Entered: ${currentRoad.road}`;
+    } 
+    else if (!detectedRoad && currentRoad !== null) {
+        // Driver exited a road
+        document.getElementById("road").textContent = `Exited: ${currentRoad.road}`;
+        currentRoad = null; // Reset
     }
 }
 
@@ -177,9 +201,12 @@ function getRoadFromCoordinates(lat, lng) {
     let speedLimit = 60; // Default speed limit
 
     for (let road of roads) {
-        let distance = getDistance(lat, lng, road.lat, road.lng);
-        if (distance < minDistance) {
-            minDistance = distance;
+        let distanceStart = getDistance(lat, lng, road.startLat, road.startLng);
+        let distanceEnd = getDistance(lat, lng, road.endLat, road.endLng);
+        let minRoadDistance = Math.min(distanceStart, distanceEnd);
+
+        if (minRoadDistance < minDistance) {
+            minDistance = minRoadDistance;
             closestRoad = road.road;
             speedLimit = road.speedLimit;
         }
@@ -204,6 +231,9 @@ navigator.geolocation.watchPosition(
 
         // Check if user is in a sensitive zone
         checkSensitiveZone(userLat, userLng);
+
+        // Check road entry & exit
+        checkRoadEntryExit(userLat, userLng);
     },
     (error) => {
         console.error("Error getting location:", error);
