@@ -53,7 +53,7 @@ const roads = [
     { road: "Thadagam Road", startLat: 11.0200, startLng: 76.9300, endLat: 11.0300, endLng: 76.9400, speedLimit: 40 },
     { road: "Sathyamangalam Road", startLat: 11.0800, startLng: 76.9430, endLat: 11.0900, endLng: 76.9550, speedLimit: 60 },
     { road: "Vilankurichi Road", startLat: 11.0650, startLng: 76.9950, endLat: 11.0750, endLng: 77.0050, speedLimit: 40 },
-    { road: "Peelamedu Road", startLat: 11.0150, startLng: 76.9780, endLat: 11.0220, endLng: 76.9880, speedLimit: 1 },
+    { road: "Peelamedu Road", startLat: 11.0150, startLng: 76.9780, endLat: 11.0220, endLng: 76.9880, speedLimit: 3 },
     { road: "Singanallur Road", startLat: 10.9930, startLng: 76.9880, endLat: 11.0000, endLng: 76.9980, speedLimit: 50 },
     { road: "Race Course Road", startLat: 10.9880, startLng: 76.9600, endLat: 10.9950, endLng: 76.9700, speedLimit: 50 },
     { road: "Gandhipuram Main Road", startLat: 11.0120, startLng: 76.9630, endLat: 11.0200, endLng: 76.9730, speedLimit: 40 },
@@ -63,10 +63,10 @@ const roads = [
     { road: "Coimbatore Bypass Road", startLat: 10.9900, startLng: 77.0450, endLat: 11.0100, endLng: 77.0550, speedLimit: 80 },
     { road: "L&T Bypass Road", startLat: 10.9500, startLng: 76.9850, endLat: 10.9700, endLng: 76.9950, speedLimit: 80 },
     { road: "Ettimadai Road", startLat: 10.8950, startLng: 76.8950, endLat: 10.9100, endLng: 76.9050, speedLimit: 60 },
-    { road: "Gandhimanagar Road", startLat: 11.0251, startLng: 77.0012, endLat: 11.0285, endLng: 77.0054, speedLimit: 1 },
-    { road: "VK Road", startLat: 11.0287, startLng: 77.0055, endLat: 11.0354, endLng: 77.0152, speedLimit: 1 },
-    { road: "Avarampalayam Road", startLat: 11.0358, startLng: 77.0160, endLat: 11.0451, endLng: 77.0253, speedLimit: 1 },
-    { road: "Nava India Road", startLat: 11.0215, startLng: 76.9982, endLat: 11.0282, endLng: 77.0068, speedLimit: 1 }
+    { road: "Gandhimanagar Road", startLat: 11.0251, startLng: 77.0012, endLat: 11.0285, endLng: 77.0054, speedLimit: 35 },
+    { road: "VK Road", startLat: 11.0287, startLng: 77.0055, endLat: 11.0354, endLng: 77.0152, speedLimit: 35 },
+    { road: "Avarampalayam Road", startLat: 11.0358, startLng: 77.0160, endLat: 11.0451, endLng: 77.0253, speedLimit: 35 },
+    { road: "Nava India Road", startLat: 11.0215, startLng: 76.9982, endLat: 11.0282, endLng: 77.0068, speedLimit: 3}
 ];
 
 
@@ -84,7 +84,12 @@ function getDistance(lat1, lng1, lat2, lng2) {
 }
 
 // Function to play audio alerts with a delay
-let audioPlaying = false;
+
+    let audioPlaying = false;
+    document.addEventListener("click", () => {
+        audioPlaying = false; // Reset audio blocking after user interacts
+    });
+    
 
 function playAudioAlert(file) {
     if (audioPlaying) return; // Prevent multiple alerts
@@ -126,10 +131,20 @@ function checkSensitiveZone(lat, lng) {
                 lastZoneExitDistance = null; // Reset exit tracking
                 
                 if (zone.type === "hospital") {
-                    playAudioAlert("no_horn.mp3");
+                    
+    let count = 0;
+    function playRepeatedly() {
+        if (count < 3) {
+            playAudioAlert("no_horn.mp3");
+            count++;
+            setTimeout(playRepeatedly, 2000);
+        }
+    }
+    playRepeatedly();
+    
                     document.getElementById("alert").textContent = "No Horn!";
                 } else if (zone.type === "school") {
-                    playAudioAlert("go_slow.mp3");
+                    playAudioAlert("./go_slow.mp3");
                     document.getElementById("alert").textContent = "Slow Down! School Zone";
                 }
             }
@@ -159,7 +174,7 @@ function checkSpeedLimit(currentSpeed, roadInfo) {
         if (speedLimitExceededTime === null) {
             speedLimitExceededTime = Date.now(); // Start timing
         } else if (Date.now() - speedLimitExceededTime >= 5000) { // Alert only if ignored for 5 seconds
-            playAudioAlert("roadspeeds.mp3");
+            playAudioAlert("./alert.mp3");
             document.getElementById("alert").textContent = "Slow Down! You are exceeding the speed limit.";
             speedLimitExceededTime = Date.now(); // Restart timing for next alert
         }
