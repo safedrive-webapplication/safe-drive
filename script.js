@@ -1,6 +1,7 @@
 // List of 100 major roadside schools & hospitals in Coimbatore
 const sensitiveZones = [
     { name: "PSG Hospitals", lat: 11.0183, lng: 76.9740, type: "hospital" },
+    { name: "Sri Ramakrishna Matriculation Higher Secondary School", lat: 11.0176, lng: 76.9912, type: "school" },
     { name: "Coimbatore Medical College Hospital", lat: 11.0183, lng: 76.9662, type: "hospital" },
     { name: "Ganga Hospital", lat: 11.0104, lng: 76.9616, type: "hospital" },
     { name: "KG Hospital", lat: 11.0027, lng: 76.9663, type: "hospital" },
