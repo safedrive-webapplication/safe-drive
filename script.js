@@ -49,19 +49,10 @@ const roads = [
     { road: "Kamarajar Road", startLat: 11.0120, startLng: 76.9900, endLat: 11.0180, endLng: 77.0000, speedLimit: 40 },
     { road: "Mettupalayam Road", startLat: 11.0500, startLng: 76.9450, endLat: 11.0600, endLng: 76.9550, speedLimit: 50 },
     { road: "Avinashi Road", startLat: 11.0250, startLng: 76.9980, endLat: 11.0350, endLng: 77.0080, speedLimit: 60 },
-
     { road: "Gandhimanagar Road", startLat: 11.0251, startLng: 77.0012, endLat: 11.0285, endLng: 77.0054, speedLimit: 35 },
-    
-    // VK Road
     { road: "VK Road", startLat: 11.0287, startLng: 77.0055, endLat: 11.0354, endLng: 77.0152, speedLimit: 35 },
-
-    // Avarampalayam Road
     { road: "Avarampalayam Road", startLat: 11.0358, startLng: 77.0160, endLat: 11.0451, endLng: 77.0253, speedLimit: 35 },
-
-    // Nava India Road
     { road: "Nava India Road", startLat: 11.0215, startLng: 76.9982, endLat: 11.0282, endLng: 77.0068, speedLimit: 35 },
-
-    // Other major roads in Coimbatore
     { road: "Thadagam Road", startLat: 11.0200, startLng: 76.9300, endLat: 11.0300, endLng: 76.9400, speedLimit: 40 },
     { road: "Sathyamangalam Road", startLat: 11.0800, startLng: 76.9430, endLat: 11.0900, endLng: 76.9550, speedLimit: 60 },
     { road: "Vilankurichi Road", startLat: 11.0650, startLng: 76.9950, endLat: 11.0750, endLng: 77.0050, speedLimit: 40 },
