@@ -72,6 +72,7 @@ const roads = [
 ];
 
 // Function to calculate distance between two coordinates
+// Function to calculate distance between two coordinates
 function getDistance(lat1, lng1, lat2, lng2) {
     let R = 6371; // Earth's radius in km
     let dLat = (lat2 - lat1) * (Math.PI / 180);
@@ -113,15 +114,18 @@ function playAudioAlert(file) {
 }
 
 // Function to check if the user is in a sensitive zone
-let sensitiveZoneAlertTime = null;
+let lastZoneAlert = null;
+let lastZoneExitDistance = null;
 
 function checkSensitiveZone(lat, lng) {
     for (let zone of sensitiveZones) {
         let distance = getDistance(lat, lng, zone.lat, zone.lng);
-        if (distance < 150) { // Alert only if within 150 meters
-            if (sensitiveZoneAlertTime === null) {
-                sensitiveZoneAlertTime = Date.now(); // Start timer
-            } else if (Date.now() - sensitiveZoneAlertTime >= 5000) { // Alert only if ignored for 5 seconds
+
+        if (distance < 150) { // Entering zone
+            if (lastZoneAlert !== zone.name) {  // Alert only if it's a new zone
+                lastZoneAlert = zone.name;
+                lastZoneExitDistance = null; // Reset exit tracking
+                
                 if (zone.type === "hospital") {
                     playAudioAlert("no_horn.mp3");
                     document.getElementById("alert").textContent = "No Horn!";
@@ -129,12 +133,23 @@ function checkSensitiveZone(lat, lng) {
                     playAudioAlert("go_slow.mp3");
                     document.getElementById("alert").textContent = "Slow Down! School Zone";
                 }
-                sensitiveZoneAlertTime = null; // Reset timer
             }
-            return; // Stop checking further zones
+            return;
         }
     }
-    sensitiveZoneAlertTime = null; // Reset if not in any zone
+
+    // If no zone is detected, track exit distance
+    if (lastZoneAlert !== null) {
+        if (lastZoneExitDistance === null) {
+            lastZoneExitDistance = 0; // Start tracking exit distance
+        }
+        lastZoneExitDistance += 10; // Assume GPS updates every ~10 meters
+
+        if (lastZoneExitDistance > 200) { // Ensure 200 meters before resetting
+            lastZoneAlert = null;
+            lastZoneExitDistance = null;
+        }
+    }
 }
 
 // Function to check if the user is overspeeding
