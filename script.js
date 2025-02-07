@@ -261,7 +261,7 @@ navigator.geolocation.watchPosition(
     },
     (error) => {
         console.error("Error getting location:", error);
-        alert("Location access is required for the application to work properly. Please enable location services.");
+        alert("Click anywhere to enable audio alerts!");
     },
     { enableHighAccuracy: true, maximumAge: 5000, timeout: 10000 }
 );
