@@ -48,7 +48,7 @@ const roads = [
     { road: "Trichy Road", startLat: 10.9880, startLng: 76.9950, endLat: 10.9950, endLng: 77.0050, speedLimit: 50 },
     { road: "Kamarajar Road", startLat: 11.0120, startLng: 76.9900, endLat: 11.0180, endLng: 77.0000, speedLimit: 40 },
     { road: "Mettupalayam Road", startLat: 11.0500, startLng: 76.9450, endLat: 11.0600, endLng: 76.9550, speedLimit: 50 },
-    { road: "Avinashi Road", startLat: 11.0250, startLng: 76.9980, endLat: 11.0350, endLng: 77.0080, speedLimit: 60 },
+    { road: "Avinashi Road", startLat: 11.0250, startLng: 76.9980, endLat: 11.0350, endLng: 77.0080, speedLimit: 1 },
 
     // Other major roads in Coimbatore
     { road: "Thadagam Road", startLat: 11.0200, startLng: 76.9300, endLat: 11.0300, endLng: 76.9400, speedLimit: 40 },
