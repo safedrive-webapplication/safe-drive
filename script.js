@@ -157,7 +157,7 @@ function checkSpeedLimit(currentSpeed, roadInfo) {
         }
     } else {
         speedLimitExceededTime = null; // Reset if below speed limit
-        document.getElementById("alert").textContent = `You are within the speed limit of ${roadInfo.speedLimit} km/h`;
+        document.getElementById("alert").textContent = You are within the speed limit of ${roadInfo.speedLimit} km/h;
     }
 }
 
@@ -185,11 +185,11 @@ function checkRoadEntryExit(lat, lng) {
     if (detectedRoad && currentRoad === null) {
         // Driver just entered a road
         currentRoad = detectedRoad;
-        document.getElementById("road").textContent = `Entered: ${currentRoad.road}`;
+        document.getElementById("road").textContent = Entered: ${currentRoad.road};
     } 
     else if (!detectedRoad && currentRoad !== null) {
         // Driver exited a road
-        document.getElementById("road").textContent = `Exited: ${currentRoad.road}`;
+        document.getElementById("road").textContent = Exited: ${currentRoad.road};
         currentRoad = null; // Reset
     }
 }
@@ -239,4 +239,4 @@ navigator.geolocation.watchPosition(
         console.error("Error getting location:", error);
     },
     { enableHighAccuracy: true, maximumAge: 5000, timeout: 10000 }
-);
+); 
