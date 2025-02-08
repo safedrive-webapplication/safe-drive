@@ -261,7 +261,6 @@ navigator.geolocation.watchPosition(
     },
     (error) => {
         console.error("Error getting location:", error);
-        alert("Click anywhere to enable audio alerts!");
     },
     { enableHighAccuracy: true, maximumAge: 5000, timeout: 10000 }
 );
