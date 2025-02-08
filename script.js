@@ -265,3 +265,8 @@ navigator.geolocation.watchPosition(
     },
     { enableHighAccuracy: true, maximumAge: 5000, timeout: 10000 }
 );
+// Show containers when "Start Driving" is clicked
+document.getElementById("start-driving-btn").addEventListener("click", function () {
+    document.querySelector(".speed-road-container").style.display = "flex"; // Show speed, road, alert
+    this.style.display = "none"; // Hide button after clicking
+});
