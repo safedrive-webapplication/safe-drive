@@ -269,3 +269,20 @@ document.getElementById("start-driving-btn").addEventListener("click", function 
     document.querySelector(".speed-road-container").style.display = "flex"; // Show speed, road, alert
     this.style.display = "none"; // Hide button after clicking
 });
+// Show containers when "Start Driving" is clicked
+document.getElementById("start-driving-btn").addEventListener("click", function () {
+    document.querySelector(".speed-road-container").style.display = "flex"; // Show speed, road, alert
+    this.style.display = "none"; // Hide button after clicking
+});
+// SOS Button Functionality (Call Any Mobile Number)
+const sosButton = document.getElementById("sosButton");
+
+sosButton.addEventListener("click", () => {
+    const emergencyNumber = "7010401949"; // Replace with your desired phone number
+
+    // Open phone dialer with the number
+    window.location.href = `tel:${emergencyNumber}`;
+
+    alert(`Calling ${emergencyNumber}...`);
+});
+
