@@ -282,7 +282,5 @@ sosButton.addEventListener("click", () => {
 
     // Open phone dialer with the number
     window.location.href = `tel:${emergencyNumber}`;
-
-    alert(`Calling ${emergencyNumber}...`);
 });
 
