@@ -97,6 +97,26 @@ html, body {
     width: 100%;
     margin-top: auto;
 }
+/* Start Driving Button Styles */
+#start-driving-btn {
+    background-color: #007bff; /* Same as speed container */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block; /* Initially visible */
+}
+
+/* Hide speed, road, and alert containers initially */
+.speed-road-container {
+    display: none;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -118,5 +138,11 @@ html, body {
     .safety-item img {
         width: 50px;
         height: 50px;
+    }
+}
+@media (max-width: 480px) {
+    #start-driving-btn {
+        font-size: 14px;
+        padding: 12px;
     }
 }
