@@ -42,7 +42,7 @@ const roads = [
     { road: "Kuniamuthur Road", startLat: 10.9520, startLng: 76.9700, endLat: 10.9565, endLng: 76.9790, speedLimit: 50 },
     { road: "Sundakkamuthur Road", startLat: 10.9580, startLng: 76.9650, endLat: 10.9625, endLng: 76.9755, speedLimit: 40 },
     { road: "Palakkad Main Road", startLat: 10.9490, startLng: 76.9750, endLat: 10.9550, endLng: 76.9850, speedLimit: 60 },
-    { road: "Pollachi Main Road", startLat: 10.9400, startLng: 76.9700, endLat: 10.9480, endLng: 76.9800, speedLimit: 50 },
+    { road: "Palakkad Main Road", startLat: 10.9400, startLng: 76.9700, endLat: 10.9480, endLng: 76.9800, speedLimit: 50 },
     { road: "Madukkarai Road", startLat: 10.9280, startLng: 76.9680, endLat: 10.9350, endLng: 76.9780, speedLimit: 50 },
     { road: "Ukkadam Bypass Road", startLat: 10.9810, startLng: 76.9700, endLat: 10.9880, endLng: 76.9820, speedLimit: 60 },
     { road: "Trichy Road", startLat: 10.9880, startLng: 76.9950, endLat: 10.9950, endLng: 77.0050, speedLimit: 50 },
